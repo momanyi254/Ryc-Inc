@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 
 const userRoute = require('./routes/users')
 const carRoute = require('./routes/cars');
+const hireRoute = require('./routes/hire');
+const buyRoute = require('./routes/buy');
 
 
 app.use(morgan('dev'));
@@ -14,6 +16,9 @@ app.use(bodyParser.json());
 //request handlers
 app.use('/users', userRoute)
 app.use('/cars', carRoute)
+app.use('/hire', hireRoute)
+app.use('/buy', buyRoute)
+
 
 
 

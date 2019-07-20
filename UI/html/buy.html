@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Momanyi INC| Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/modal.css">
+
+    <script src="../js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="header-logo">Momanyi Inc</a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="">Buy Car</a>
+                </li>
+                <li>
+                    <a href="">Rent Car</a>
+                </li>
+                <li>
+                    <a href="hire.html" onclick="open()">Hire Car</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <a href="#" class="mobile" id="menu">MENU</a>
+    <main>
+        <div class="aside">
+            <ul id="nav">
+                <li class="set">SERVICES</li>
+                <li>
+                    <a href="#">Available Cars</a>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#">Account Setting</a>
+                </li>
+                <li>
+                    <a href="#">Account Setting</a>
+                </li>
+                <li>
+                    <a href="#" class="logout">LogOut</a>
+                </li>
+
+            </ul>
+        </div>
+        <section class="content">
+
+            <div class="grid-item">
+                <h2>Modal create car for sale</h2>
+
+                <button onclick="document.getElementById('id01').style.display='grid'" style="width:100%;">Sale car
+                    <button>
+            </div>
+            <div class="grid-item">
+
+                <div id="id01" class="modal">
+
+                    <form class="modal-content animate" action="/action_page.php">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <img src="../images/gg.jpg" alt="Avatar" class="avatar" style="width:120px;height:60px;">
+                        </div>
+
+                        <div class="container">
+                            <label for="uname">
+                                <b>Username</b>
+                            </label>
+                            <p>Upload Car Image</p>
+                <input type="file" name="pic" accept="image/*">
+                 <p> Vehicle condition/state:</p>
+                <input type="radio" name="codition" value="new"> new
+                <input type="radio" name="condition" value="used"> used
+                <br/>
+                <p> Status:</p>
+
+                <input type="radio" name="available" value="available"> available
+                <input type="radio" name="sold" value="sold"> sold
+                <br/>
+                <p> Manufacture</p>
+                <select id="manf" name="manufacturef" placeholder="manufacturef" required>
+                    <option value="TOYOTA">Toyota</option>
+                    <option value="GENERAL MOTORS">General Motors Company</option>
+                    <option value="FORD MOTOR COMPANY">Ford Motor Company</option>
+                    <option value="MERCEDES BENZ">Mercedes Benz</option>
+                    <option value="CHEVROLET">USA</option>
+                    <option value="HUMMER">USA</option>
+
+                </select>
+
+                <p> Model</p>
+                <select id="mdl" name="model" placeholder="manufacturef" required>
+                    <option value="TOYOTA">Toyota</option>
+                    <option value="FORD">Ford</option>
+                    <option value="MERCEDE BENZ">Mercedes Benz</option>
+                    <option value="RANGE ROVER">Range Rover</option>
+                    <option value="LAND ROVER">Land Rover</option>
+                    <option value="CHEVROLET">Chevrolet</option>
+                    <option value="HUMMER">Hummer</option>
+                </select>
+                <p> Body Type</p>
+                <select id="bt" name="type" placeholder="manufacturef" required>
+                    <option value="VAN">Van</option>
+                    <option value="TRUCK">Truck</option>
+                    <option value="TRAILER">Trailer</option>
+                    <option value="BUS">Bus</option>
+                    <option value="CAR">Car</option>
+                    <option value="PRADO">Pradp</option>
+                    <option value="PICK UP">Pick Up</option>
+
+                </select>
+                <br/>
+                <p> Price</p>
+                <input type="float" name="price" placeholder="price" required>
+                <br>
+                <br>
+
+                <button id="submit" onclick="postad()">Post Ad</button>
+                <br>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                            <span class="psw">Forgot
+                                <a href="#">password?</a>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>Momanyi INC , Copyright &copy; 2019</p>
+    </footer>
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
