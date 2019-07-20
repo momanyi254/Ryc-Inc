@@ -25,6 +25,28 @@ exports.carValidator = (car) => {
 		model: Joi.string().required(),
 		price: Joi.number().positive().precision(2).required(),
 		state: Joi.string().required(),
+		status: Joi.string().required()
 	});
 	return Joi.validate(car, schema);
+};
+exports.hireValidator = (hire) => {
+	const schema = {
+		id:  Joi.number().positive().required(),
+		daysHired: Joi.number().positive().required(),
+		priceEstimates: Joi.number().positive().required(),
+
+
+	};
+	return Joi.validate(hire, schema);
+};
+
+
+
+exports.buyValidator = (order) => {
+
+	const schema = {
+		id:  Joi.number().positive().required(),
+
+	};
+	return Joi.validate(order, schema);
 };
